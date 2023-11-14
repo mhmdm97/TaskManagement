@@ -17,6 +17,10 @@ public partial class User
 
     public DateTime? UpdatedOn { get; set; }
 
+    public string? RefreshToken { get; set; }
+
+    public DateTime? RefreshTokenExpiry { get; set; }
+
     public virtual ICollection<Task> TaskAssignedUserNavigations { get; set; } = new List<Task>();
 
     public virtual ICollection<Task> TaskCreatedByNavigations { get; set; } = new List<Task>();

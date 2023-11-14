@@ -2,12 +2,11 @@
 
 namespace TaskManagementApi.Models.Requests.UserRequests
 {
-    public class LoginRequest
+    public class RefreshRequest
     {
         [Required]
-        public string Username { get; set; } = null!;
+        public string? AccessToken { get; set; }
         [Required]
-        public string Password { get; set; } = null!;
-
+        public string? RefreshToken { get; set; }
     }
 }

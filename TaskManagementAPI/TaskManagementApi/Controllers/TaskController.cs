@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TaskManagementApi.Models.Requests.TaskRequests;
 using TaskManagementApi.Services.Interfaces;
@@ -6,6 +7,7 @@ using TaskManagementApi.Services.Interfaces;
 namespace TaskManagementApi.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class TaskController : ControllerBase
     {

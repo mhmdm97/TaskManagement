@@ -122,6 +122,12 @@ public partial class TaskManagementContext : DbContext
             entity.Property(e => e.Password)
                 .HasMaxLength(100)
                 .HasColumnName("password");
+            entity.Property(e => e.RefreshToken)
+                .HasMaxLength(200)
+                .HasColumnName("refresh_token");
+            entity.Property(e => e.RefreshTokenExpiry)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("refresh_token_expiry");
             entity.Property(e => e.UpdatedOn)
                 .HasColumnType("timestamp without time zone")
                 .HasColumnName("updated_on");
